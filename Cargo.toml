@@ -1,0 +1,6 @@
+[package]
+name = "iqe"
+version = "0.1.0"
+authors = ["Lucien Greathouse <me@lpghatguy.com>"]
+
+[dependencies]
