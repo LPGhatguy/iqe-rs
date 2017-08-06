@@ -25,12 +25,34 @@ pub struct IqeMesh {
 	pub faces: Option<Vec<[usize; 3]>>,
 }
 
+impl IqeMesh {
+	/// Creates a new, empty IqeMesh with the given name.
+	pub fn new(name: &str) -> IqeMesh {
+		IqeMesh {
+			name: String::from(name),
+			positions: None,
+			texture_coords: None,
+			normals: None,
+			faces: None,
+		}
+	}
+}
+
 /// Represents the result of loading an IQE file.
 ///
 /// An entity contains zero or more named [IqeMesh](struct.IqeMesh.html) objects.
 #[derive(Debug)]
 pub struct IqeModel {
 	pub meshes: Vec<IqeMesh>,
+}
+
+impl IqeModel {
+	/// Creates a new, empty IqeModel.
+	pub fn new() -> IqeModel {
+		IqeModel {
+			meshes: Vec::new(),
+		}
+	}
 }
 
 /// Possible error conditions reachable when loading an IQE file.

@@ -1,5 +1,5 @@
 mod types;
-mod loader;
+mod parser;
 
 pub use types::*;
-pub use loader::*;
+pub use parser::*;
