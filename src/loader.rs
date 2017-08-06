@@ -25,20 +25,20 @@ fn match_header<T: BufRead>(lines: &mut Lines<T>) -> Result<(), IqeError> {
 	Ok(())
 }
 
-fn load_from_lines<T: BufRead>(lines: &mut Lines<T>) -> Result<IqeEntity, IqeError> {
+fn load_from_lines<T: BufRead>(lines: &mut Lines<T>) -> Result<IqeModel, IqeError> {
 	try!(match_header(lines));
 
 	for line in lines {
 		println!("{:?}", line);
 	}
 
-	Ok(IqeEntity {
+	Ok(IqeModel {
 		meshes: vec![],
 	})
 }
 
 /// Tries to load an IQE entity from a string slice.
-pub fn load_from_str(source: &str) -> Result<IqeEntity, IqeError> {
+pub fn load_from_str(source: &str) -> Result<IqeModel, IqeError> {
 	let mut lines = Cursor::new(source).lines();
 
 	load_from_lines(&mut lines)

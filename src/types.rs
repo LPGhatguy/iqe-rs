@@ -29,7 +29,7 @@ pub struct IqeMesh {
 ///
 /// An entity contains zero or more named [IqeMesh](struct.IqeMesh.html) objects.
 #[derive(Debug)]
-pub struct IqeEntity {
+pub struct IqeModel {
 	pub meshes: Vec<IqeMesh>,
 }
 

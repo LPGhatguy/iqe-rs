@@ -1,5 +1,5 @@
 # iqe-rs
-A mesh loader for IQE, a portable and simple mesh format.
+A loader for IQE, a portable and simple model format.
 
 For a description of the format, a Blender export plugin, and a conversion utility, see https://github.com/lsalzman/iqm.
 
