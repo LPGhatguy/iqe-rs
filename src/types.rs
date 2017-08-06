@@ -71,4 +71,7 @@ pub enum IqeError {
 	/// There was some invalid data present in the IQE file somewhere after the
 	/// header.
 	InvalidData,
+
+	/// Something went wrong with the parser internally.
+	InternalParserError,
 }

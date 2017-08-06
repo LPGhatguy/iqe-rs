@@ -1,9 +1,9 @@
 extern crate iqe;
 
-const CUBE: &'static str = include_str!("data/cube.iqe");
+const CUBE: &'static str = include_str!("data/nameless.iqe");
 
 #[test]
-fn it_loads_cube() {
+fn it_loads_nameless_mesh() {
 	let loaded = iqe::load_from_str(CUBE);
 
 	assert!(loaded.is_ok());
@@ -14,5 +14,5 @@ fn it_loads_cube() {
 
 	let mesh = &result.meshes[0];
 
-	assert_eq!(mesh.name, "Cube");
+	assert_eq!(mesh.name, "");
 }
