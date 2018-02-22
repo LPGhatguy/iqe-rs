@@ -1,6 +1,8 @@
 # iqe-rs
 A loader for IQE, a portable and simple model format.
 
+**iqe-rs is currently horribly unfinished and not maintained.**
+
 For a description of the format, a Blender export plugin, and a conversion utility, see https://github.com/lsalzman/iqm.
 
 ## License
